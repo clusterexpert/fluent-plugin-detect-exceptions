@@ -295,7 +295,7 @@ module Fluent
       when 1
         @emit.call(@first_timestamp, @first_record)
       else
-        combined_message = @messages.join
+        combined_message = @messages.join("\n")
         if @message_field.nil?
           output_record = combined_message
         else
